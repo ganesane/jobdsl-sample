@@ -19,7 +19,7 @@ def createBuildJob(name,data) {
           url(data.url)
         }
         branch(data.branch)
-        createTag(false)
+//      createTag(false)
       }
     }
   
@@ -29,7 +29,7 @@ def createBuildJob(name,data) {
 
     steps {
       maven {
-        mavenInstallation('3.1.1')
+        mavenInstallation('3.6.3')
         goals('clean install')
       }
     }
